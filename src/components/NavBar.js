@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { NavLink } from 'react-router-dom';
+import { Navbar, Nav} from "react-bootstrap";
 
 class NavBar extends Component {
   render() {
@@ -10,9 +11,9 @@ class NavBar extends Component {
             <h3>Luis Gomez</h3>
           </Navbar.Brand>
           <Nav className="justify-content-end ml-auto">
-            <Nav.Link href="#home">About</Nav.Link>
-            <Nav.Link href="#features">Protfolio</Nav.Link>
-            <Nav.Link href="#pricing">Contact</Nav.Link>
+            <NavLink to="/home" className = 'nav-link'>About</NavLink>
+            <NavLink to="/portfolio" className = 'nav-link'>Protfolio</NavLink>
+            <NavLink to="/contact" className = 'nav-link'>Contact</NavLink>
 
           </Nav>
         </Navbar>
